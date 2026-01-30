@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПЕРВЫЙ.НАВИГАТОР | Главный портал экосистемы</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <style>
+        :root { --p-red: #dc2626; }
+        .hero-title { font-size: clamp(3.5rem, 12vw, 9rem); line-height: 0.85; }
+        .content-section { padding-top: 6rem; padding-bottom: 6rem; border-bottom: 1px solid #f1f5f9; }
+        .grid-custom { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+        .direction-card { background: #fff; padding: 2.5rem; border-radius: 2rem; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #f1f5f9; }
+        .direction-card:hover { transform: translateY(-10px); border-color: var(--p-red); }
+        .number-bg { position: absolute; font-size: 10rem; font-weight: 900; color: rgba(220, 38, 38, 0.03); z-index: -1; top: -20px; left: -20px; }
+        .sticky-nav { position: sticky; top: 80px; z-index: 40; background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+    <custom-navbar></custom-navbar>
+
+    <header class="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-40 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col items-center text-center">
+                <span class="bg-red-600 text-white px-6 py-2 rounded-full text-sm font-bold tracking-[0.3em] uppercase mb-8 animate-pulse">Официальный ресурс</span>
+                <h1 class="hero-title font-black uppercase tracking-tighter mb-8">БУДЬ<br><span class="text-red-600">ПЕРВЫМ</span></h1>
+                <p class="text-xl md:text-3xl max-w-4xl opacity-80 font-light leading-relaxed mb-12">
+                    Единая точка доступа к грантам, форумам, путевкам и сообществу самых активных людей страны.
+                </p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="https://будьвдвижении.рф" class="bg-red-600 hover:bg-red-700 text-white px-12 py-6 rounded-2xl text-2xl font-black transition-all shadow-2xl hover:scale-105">РЕГИСТРАЦИЯ</a>
+                    <a href="#about" class="bg-white/10 hover:bg-white/20 backdrop-blur text-white border border-white/30 px-12 py-6 rounded-2xl text-2xl font-black transition-all">ЧИТАТЬ ГИД</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i data-feather="chevron-down" class="w-10 h-10 text-white/30"></i>
+        </div>
+    </header>
+
+    <nav class="sticky-nav border-b border-gray-100 hidden md:block">
+        <div class="container mx-auto px-4 py-4 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-gray-500">
+            <a href="#about" class="hover:text-red-600 transition">О Движении</a>
+            <a href="#directions" class="hover:text-red-600 transition">Направления</a>
+            <a href="#values" class="hover:text-red-600 transition">Ценности</a>
+            <a href="#cyber" class="hover:text-red-600 transition">Кибер-щит</a>
+            <a href="#roadmap" class="hover:text-red-600 transition">Дорожная карта</a>
+        </div>
+    </nav>
+
+    <section id="about" class="content-section">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl">
+                <h2 class="text-5xl font-black mb-12 uppercase italic text-red-600">Что такое Движение Первых?</h2>
+                <div class="space-y-6 text-xl text-gray-700 leading-loose">
+                    <p><b>Российское движение детей и молодежи «Движение Первых»</b> — это не просто организация, это государственная стратегия развития талантов. Созданное в 2022 году по инициативе самих детей, Движение объединило в себе опыт всех молодежных объединений прошлого, добавив современные технологии и неограниченные ресурсы.</p>
+                    <p>Сегодня Движение — это более 7 миллионов участников. Мы работаем в каждом регионе, от Калининграда до Камчатки. Наша цель: создать среду, где каждый ребенок, независимо от места проживания и достатка семьи, сможет реализовать свою мечту. Мы строим будущее вместе, основываясь на уважении к традициям и смелости перед инновациями.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
+                    <div class="bg-red-600 p-8 rounded-3xl">
+                        <h4 class="text-2xl font-black mb-4 uppercase italic">Миссия</h4>
+                        <p class="opacity-90">Быть с Россией, быть человеком, быть вместе, быть в движении, быть первыми. Это фундамент, на котором мы строим каждый свой день.</p>
+                    </div>
+                    <div class="bg-black p-8 rounded-3xl">
+                        <h4 class="text-2xl font-black mb-4 uppercase italic">Масштаб</h4>
+                        <p class="opacity-80">Более 40 000 первичных отделений. Это значит, что Движение есть в каждой второй школе страны. Мы рядом.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="directions" class="content-section bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-6xl font-black uppercase mb-4">12 векторов развития</h2>
+                <p class="text-2xl text-gray-500">У нас нет «лишних» интересов. Мы поддерживаем всё.</p>
+            </div>
+            
+            <div class="grid-custom">
+                <div class="direction-card relative overflow-hidden">
+                    <span class="number-bg">01</span>
+                    <i data-feather="book" class="text-red-600 mb-6 w-12 h-12"></i>
+                    <h3 class="text-2xl font-black mb-4 uppercase">Образование</h3>
+                    <p class="text-gray-600 mb-6 font-medium leading-relaxed italic">«УЧИСЬ И ПОЗНАВАЙ!»</p>
+                    <p class="text-sm text-gray-500 mb-4">Ключевые проекты: «Знание.Первые», «Университетские смены», «Без срока давности». Здесь ты получишь доступ к лекциям лучших ученых и сможешь попасть в топовые вузы страны еще до поступления.</p>
+                </div>
+                <div class="direction-card relative overflow-hidden">
+                    <span class="number-bg">02</span>
+                    <i data-feather="tool" class="text-red-600 mb-6 w-12 h-12"></i>
+                    <h3 class="text-2xl font-black mb-4 uppercase">Наука</h3>
+                    <p class="text-gray-600 mb-6 font-medium leading-relaxed italic">«ДЕРЗАЙ И ОТКРЫВАЙ!»</p>
+                    <p class="text-sm text-gray-500 mb-4">Для будущих инженеров и исследователей. Работа в «Кванториумах», стажировки в Роскосмосе, участие в разработке малых спутников и нейросетей.</p>
+                </div>
+                <div class="direction-card relative overflow-hidden">
+                    <span class="number-bg">03</span>
+                    <i data-feather="briefcase" class="text-red-600 mb-6 w-12 h-12"></i>
+                    <h3 class="text-2xl font-black mb-4 uppercase">Труд и профессия</h3>
+                    <p class="text-gray-600 mb-6 font-medium leading-relaxed italic">«НАЙДИ ПРИЗВАНИЕ!»</p>
+                    <p class="text-sm text-gray-500 mb-4">Профориентация нового поколения. Посещение крупнейших заводов, работа в «Первых рабочих местах» и обучение основам предпринимательства.</p>
+                </div>
+                <div class="direction-card relative overflow-hidden">
+                    <span class="number-bg">04</span>
+                    <i data-feather="heart" class="text-red-600 mb-6 w-12 h-12"></i>
+                    <h3 class="text-2xl font-black mb-4 uppercase">Добровольчество</h3>
+                    <p class="text-gray-600 mb-6 font-medium leading-relaxed italic">«БЛАГО ТВОРИ!»</p>
+                    <p class="text-sm text-gray-500 mb-4">Волонтерская книжка, которая дает баллы к ЕГЭ. Помощь в госпиталях, приютах для животных и экологические десанты по всей России.</p>
+                </div>
+                <div class="direction-card relative overflow-hidden">
+                    <span class="number-bg">05</span>
+                    <i data-feather="globe" class="text-red-600 mb-6 w-12 h-12"></i>
+                    <h3 class="text-2xl font-black mb-4 uppercase">Дипломатия</h3>
+                    <p class="text-gray-600 mb-6 font-medium leading-relaxed italic">«УМЕЙ ДРУЖИТЬ!»</p>
+                    <p class="text-sm text-gray-500 mb-4">Международные смены, Клуб интернациональной дружбы и общение с молодежью из стран БРИКС и СНГ. Строй глобальные связи.</p>
+                </div>
+                <div class="direction-card relative overflow-hidden">
+                    <span class="number-bg">06</span>
+                    <i data-feather="star" class="text-red-600 mb-6 w-12 h-12"></i>
+                    <h3 class="text-2xl font-black mb-4 uppercase">Культура</h3>
+                    <p class="text-gray-600 mb-6 font-medium leading-relaxed italic">«СОЗДАВАЙ И ВДОХНОВЛЯЙ!»</p>
+                    <p class="text-sm text-gray-500 mb-4">Творческие кастинги, хоры Первых, театральные фестивали и возможность выступить на Красной площади в составе сводного коллектива.</p>
+                </div>
+                <div class="direction-card relative overflow-hidden bg-red-600 text-white border-none">
+                    <h3 class="text-2xl font-black mb-4 uppercase">И еще 6 направлений...</h3>
+                    <p class="opacity-80">Медиа, ЗОЖ, Спорт, Экология, Туризм и Патриотизм. Каждый найдет свою нишу в нашей огромной семье.</p>
+                    <a href="https://будьвдвижении.рф/projects" class="mt-6 inline-block bg-white text-red-600 px-6 py-2 rounded-xl font-bold uppercase">Смотреть все</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="values" class="content-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-black text-center mb-20 uppercase tracking-tighter">Наши Ценности</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="space-y-4">
+                    <h4 class="text-xl font-black text-red-600 uppercase italic">Жизнь и достоинство</h4>
+                    <p class="text-gray-600">Мы ценим жизнь каждого человека и право на уважение вне зависимости от обстоятельств.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-xl font-black text-red-600 uppercase italic">Патриотизм</h4>
+                    <p class="text-gray-600">Любовь к Родине выражается в делах, а не только в словах. Мы изучаем историю и строим будущее.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-xl font-black text-red-600 uppercase italic">Крепкая семья</h4>
+                    <p class="text-gray-600">Семья — это опора. Мы вовлекаем родителей в наши проекты и укрепляем связь поколений.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-xl font-black text-red-600 uppercase italic">Созидательный труд</h4>
+                    <p class="text-gray-600">Любой успех — это результат усилий. Мы учимся трудиться на благо общества и себя.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-xl font-black text-red-600 uppercase italic">Взаимопомощь</h4>
+                    <p class="text-gray-600">Один в поле не воин. В Движении мы всегда готовы подставить плечо товарищу.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-xl font-black text-red-600 uppercase italic">Единство народов</h4>
+                    <p class="text-gray-600">Россия — многонациональная страна. Мы уважаем культуру и обычаи каждого народа.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="tech-academy" class="py-32 tech-bg text-white overflow-hidden relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="lg:w-1/2">
+                    <h2 class="text-5xl font-black uppercase mb-8 leading-tight">Цифровая Академия <br><span class="text-red-500">Первых</span></h2>
+                    <p class="text-xl text-gray-400 mb-10 leading-relaxed">
+                        Мы учим не просто пользоваться интернетом, а создавать его. Программирование, работа с искусственным интеллектом и разработка собственных ИТ-продуктов — это реальность для участников нашего ИТ-кластера.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="border-l-4 border-red-600 pl-6 py-2">
+                            <h4 class="text-xl font-bold mb-2">Нейросети</h4>
+                            <p class="text-sm text-gray-500">Курсы по генеративному искусству и работе с LLM-моделями.</p>
+                        </div>
+                        <div class="border-l-4 border-red-600 pl-6 py-2">
+                            <h4 class="text-xl font-bold mb-2">Разработка</h4>
+                            <p class="text-sm text-gray-500">Создание мобильных приложений и веб-сервисов для Движения.</p>
+                        </div>
+                        <div class="border-l-4 border-red-600 pl-6 py-2">
+                            <h4 class="text-xl font-bold mb-2">GameDev</h4>
+                            <p class="text-sm text-gray-500">Разработка патриотических и обучающих игр на популярных движках.</p>
+                        </div>
+                        <div class="border-l-4 border-red-600 pl-6 py-2">
+                            <h4 class="text-xl font-bold mb-2">Data Science</h4>
+                            <p class="text-sm text-gray-500">Анализ больших данных для улучшения экосистемы проектов.</p>
+                        </div>
+                    </div>
+                    <button class="mt-12 bg-white text-gray-900 px-8 py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-red-500 hover:text-white transition-all">Узнать ИТ-проекты</button>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <div class="relative z-10 bg-white/5 backdrop-blur-3xl border border-white/10 p-10 rounded-[4rem] shadow-2xl">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <span class="text-xs font-mono text-gray-500 ml-4">academy_terminal — v.2.0.26</span>
+                        </div>
+                        <div class="font-mono text-sm space-y-2">
+                            <p class="text-green-400">> Инициализация модуля талантов...</p>
+                            <p class="text-blue-400">> Проверка доступных грантов: 12 активных</p>
+                            <p class="text-white">> Подключение к базе данных регионов: УСПЕШНО</p>
+                            <p class="text-yellow-400">> Статус: ГОТОВ К ЗАПУСКУ БУДУЩЕГО</p>
+                            <div class="mt-8 h-1 bg-white/10 w-full rounded-full overflow-hidden">
+                                <div class="h-full bg-red-600 w-3/4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-20 -right-20 w-96 h-96 bg-red-600/20 blur-[100px] rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="3d-modeling" class="py-32 bg-white overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+            <div class="lg:w-1/2 relative">
+                <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-8 border-gray-50">
+                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800" alt="3D Modeling" class="w-full h-[500px] object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-10">
+                        <div class="text-white">
+                            <p class="text-red-500 font-bold uppercase tracking-widest mb-2">Инструментарий</p>
+                            <p class="text-sm opacity-80 font-mono">Blender / Unreal Engine 5 / CAD / Substance Painter</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-red-600/5 rounded-full blur-3xl -z-10"></div>
+            </div>
+
+            <div class="lg:w-1/2">
+                <span class="text-red-600 font-black uppercase tracking-[0.3em] text-sm block mb-6">// Визуализация будущего</span>
+                <h2 class="text-5xl font-black uppercase mb-8 leading-tight">3D-моделирование и <br><span class="text-gray-400">Digital-проектирование</span></h2>
+                <p class="text-xl text-gray-600 mb-10 leading-relaxed">
+                    В Движении мы открываем доступ к технологиям, которые раньше были доступны только профессиональным студиям. Создавай персонажей для метавселенных, проектируй детали для печати на 3D-принтерах или делай архитектурные макеты городов будущего.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                        <i data-feather="box" class="text-red-600 mb-4"></i>
+                        <h4 class="font-bold mb-2 uppercase">GameDev</h4>
+                        <p class="text-sm text-gray-500">Создание низкополигональных моделей и текстурирование для инди-игр.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                        <i data-feather="layers" class="text-red-600 mb-4"></i>
+                        <h4 class="font-bold mb-2 uppercase">Прототипирование</h4>
+                        <p class="text-sm text-gray-500">Инженерное моделирование для участия в конкурсах молодых изобретателей.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="media-production" class="py-32 bg-black text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+    
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto text-center mb-20">
+            <h2 class="text-6xl font-black uppercase mb-6 italic tracking-tighter">Голос <span class="text-red-600">Поколения</span></h2>
+            <p class="text-xl text-gray-400">Мы даем оборудование и знания. Ты даешь идеи. Создавай контент, который меняет жизни миллионов людей.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group relative p-10 bg-white/5 border border-white/10 rounded-[2.5rem] hover:bg-red-600 transition-all duration-500">
+                <div class="mb-20">
+                    <i data-feather="video" class="w-12 h-12 text-red-600 group-hover:text-white mb-6"></i>
+                    <h3 class="text-2xl font-bold uppercase mb-4">Видеопродакшн</h3>
+                    <p class="text-gray-500 group-hover:text-white/80 transition-colors">От съемки коротких рилсов до документальных фильмов о героях твоего города.</p>
+                </div>
+                <div class="absolute bottom-10 right-10 opacity-10 group-hover:opacity-100 transition-opacity">
+                    <i data-feather="arrow-up-right" class="w-8 h-8"></i>
+                </div>
+            </div>
+
+            <div class="group relative p-10 bg-white/5 border border-white/10 rounded-[2.5rem] hover:bg-red-600 transition-all duration-500">
+                <div class="mb-20">
+                    <i data-feather="mic" class="w-12 h-12 text-red-600 group-hover:text-white mb-6"></i>
+                    <h3 class="text-2xl font-bold uppercase mb-4">Подкасты</h3>
+                    <p class="text-gray-500 group-hover:text-white/80 transition-colors">Студийная запись интервью с лидерами мнений, экспертами и твоими сверстниками.</p>
+                </div>
+                <div class="absolute bottom-10 right-10 opacity-10 group-hover:opacity-100 transition-opacity">
+                    <i data-feather="arrow-up-right" class="w-8 h-8"></i>
+                </div>
+            </div>
+
+            <div class="group relative p-10 bg-white/5 border border-white/10 rounded-[2.5rem] hover:bg-red-600 transition-all duration-500">
+                <div class="mb-20">
+                    <i data-feather="edit-3" class="w-12 h-12 text-red-600 group-hover:text-white mb-6"></i>
+                    <h3 class="text-2xl font-bold uppercase mb-4">Копирайтинг</h3>
+                    <p class="text-gray-500 group-hover:text-white/80 transition-colors">Искусство сторителлинга и ведение федеральных сообществ в социальных сетях.</p>
+                </div>
+                <div class="absolute bottom-10 right-10 opacity-10 group-hover:opacity-100 transition-opacity">
+                    <i data-feather="arrow-up-right" class="w-8 h-8"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 p-8 bg-red-600 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex items-center gap-6">
+                <div class="w-16 h-16 bg-black/20 rounded-full flex items-center justify-center">
+                    <i data-feather="zap" class="w-8 h-8"></i>
+                </div>
+                <p class="text-xl font-bold">Получи доступ к профессиональным медиа-студиям в 89 регионах!</p>
+            </div>
+            <a href="#" class="bg-white text-black px-8 py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all">Найти студию</a>
+        </div>
+    </div>
+</section>
+
+    <section id="roadmap" class="content-section">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-black mb-20 uppercase">Твой путь к вершине</h2>
+            <div class="relative max-w-5xl mx-auto">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 h-full w-1 bg-gray-100 hidden md:block"></div>
+                
+                <div class="space-y-24">
+                    <div class="relative flex flex-col md:flex-row items-center gap-8 text-left">
+                        <div class="md:w-1/2 md:text-right">
+                            <h4 class="text-2xl font-black uppercase text-red-600">Шаг 1: Точка входа</h4>
+                            <p class="text-gray-600 mt-2">Регистрация на портале будьвдвижении.рф. Здесь ты получаешь свой ID и доступ к "Витрине проектов".</p>
+                        </div>
+                        <div class="w-12 h-12 bg-black rounded-full relative z-10 border-4 border-white flex items-center justify-center text-white font-bold">1</div>
+                        <div class="md:w-1/2"></div>
+                    </div>
+                    <div class="relative flex flex-col md:flex-row-reverse items-center gap-8 text-left">
+                        <div class="md:w-1/2 text-left">
+                            <h4 class="text-2xl font-black uppercase text-red-600">Шаг 2: Первичка</h4>
+                            <p class="text-gray-600 mt-2">Вступление в первичное отделение в твоей школе или колледже. Знакомство с куратором и командой.</p>
+                        </div>
+                        <div class="w-12 h-12 bg-black rounded-full relative z-10 border-4 border-white flex items-center justify-center text-white font-bold">2</div>
+                        <div class="md:w-1/2"></div>
+                    </div>
+                    <div class="relative flex flex-col md:flex-row items-center gap-8 text-left">
+                        <div class="md:w-1/2 md:text-right">
+                            <h4 class="text-2xl font-black uppercase text-red-600">Шаг 3: Проекты</h4>
+                            <p class="text-gray-600 mt-2">Подача заявок на федеральные конкурсы. Накопление баллов в рейтинге активности.</p>
+                        </div>
+                        <div class="w-12 h-12 bg-black rounded-full relative z-10 border-4 border-white flex items-center justify-center text-white font-bold">3</div>
+                        <div class="md:w-1/2"></div>
+                    </div>
+                    <div class="relative flex flex-col md:flex-row-reverse items-center gap-8 text-left">
+                        <div class="md:w-1/2 text-left">
+                            <h4 class="text-2xl font-black uppercase text-red-600">Шаг 4: Победа</h4>
+                            <p class="text-gray-600 mt-2">Получение путевки в МДЦ "Артек", ВДЦ "Океан" или получение гранта до 1 млн рублей на твой проект.</p>
+                        </div>
+                        <div class="w-12 h-12 bg-red-600 rounded-full relative z-10 border-4 border-white flex items-center justify-center text-white font-bold"><i data-feather="award" class="w-5"></i></div>
+                        <div class="md:w-1/2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-24 pb-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20 border-b border-white/10 pb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <h3 class="text-2xl font-black mb-6 uppercase">Первый.Навигатор</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Проект по поддержке и навигации участников Движения Первых. Мы помогаем найти свой путь в океане возможностей.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-red-600 transition"><i data-feather="send" class="w-5"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-red-600 transition"><i data-feather="instagram" class="w-5"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase mb-6 text-red-500">Разделы</h5>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="#about" class="hover:text-white transition">Об организации</a></li>
+                        <li><a href="#directions" class="hover:text-white transition">Все направления</a></li>
+                        <li><a href="#values" class="hover:text-white transition">Ценности и миссия</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition">Центр поддержки</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase mb-6 text-red-500">Документы</h5>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="https://будьвдвижении.рф/charter" class="hover:text-white transition">Устав Движения</a></li>
+                        <li><a href="#" class="hover:text-white transition">Политика данных</a></li>
+                        <li><a href="#" class="hover:text-white transition">Согласие родителя</a></li>
+                        <li><a href="#" class="hover:text-white transition">Правила грантов</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase mb-6 text-red-500">Контакты</h5>
+                    <p class="text-gray-400 text-sm mb-4">г. Омск, посёлок Магистральный ул. Молодёжная 13в</p>
+                    <p class="text-xl font-black">8 (908) 114 60 57</p>
+                    <p class="text-gray-400 text-xs mt-4">Жакупов Мадияр Талгатович (Звонок по России бесплатный)</p>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 text-xs uppercase tracking-widest">
+                © 2026 ПЕРВЫЙ.НАВИГАТОР | СДЕЛАНО ДЛЯ ЛУЧШИХ
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

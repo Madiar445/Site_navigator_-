@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>База Знаний | Первый.Навигатор</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <style>
+        .faq-gradient { background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); }
+        .answer-box { border-left: 4px solid #dc2626; transition: all 0.3s ease; }
+        .answer-box:hover { background-color: #fff5f5; transform: translateX(5px); }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <custom-navbar></custom-navbar>
+
+    <main class="container mx-auto px-4 py-16">
+        <div class="text-center mb-20">
+            <h1 class="text-6xl font-black text-gray-900 mb-6 uppercase tracking-tight">Ответы на всё</h1>
+            <p class="text-2xl text-gray-600 max-w-3xl mx-auto">Самый полный гид по выживанию и успеху в Движении. Если здесь нет ответа — значит, вопроса не существует.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <div class="lg:col-span-3 space-y-4">
+                <div class="sticky top-28 bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-gray-400 uppercase text-xs mb-4 tracking-widest">Категории</h3>
+                    <nav class="space-y-2">
+                        <a href="#reg" class="flex items-center gap-3 p-3 rounded-xl hover:bg-red-50 text-gray-700 font-bold transition">
+                            <i data-feather="user-plus" class="w-5 h-5 text-red-600"></i> Регистрация
+                        </a>
+                        <a href="#projects" class="flex items-center gap-3 p-3 rounded-xl hover:bg-red-50 text-gray-700 font-bold transition">
+                            <i data-feather="star" class="w-5 h-5 text-red-600"></i> Проекты и лагеря
+                        </a>
+                        <a href="#money" class="flex items-center gap-3 p-3 rounded-xl hover:bg-red-50 text-gray-700 font-bold transition">
+                            <i data-feather="dollar-sign" class="w-5 h-5 text-red-600"></i> Гранты и баллы
+                        </a>
+                        <a href="#parents" class="flex items-center gap-3 p-3 rounded-xl hover:bg-red-50 text-gray-700 font-bold transition">
+                            <i data-feather="heart" class="w-5 h-5 text-red-600"></i> Родителям
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="lg:col-span-9 space-y-16">
+
+                <section id="reg" class="scroll-mt-28">
+                    <h2 class="text-4xl font-black mb-8 flex items-center gap-4 text-gray-800">
+                        <span class="bg-red-600 text-white w-12 h-12 rounded-2xl flex items-center justify-center">01</span>
+                        Регистрация и Личный Кабинет
+                    </h2>
+                    <div class="grid gap-6">
+                        <div class="answer-box bg-white p-8 rounded-3xl shadow-sm">
+                            <h4 class="text-xl font-bold mb-3">Почему я не могу зарегистрироваться без Госуслуг?</h4>
+                            <p class="text-gray-600 leading-relaxed">Система ЕСИА (Госуслуги) гарантирует, что вы — это вы. Это обязательное требование безопасности для участия в выездных форумах и сменах. Если вам меньше 14 лет, регистрацию подтверждает родитель через свой профиль.</p>
+                            <a href="https://будьвдвижении.рф" class="mt-4 inline-block text-red-600 font-bold underline">Перейти к регистрации →</a>
+                        </div>
+                        <div class="answer-box bg-white p-8 rounded-3xl shadow-sm">
+                            <h4 class="text-xl font-bold mb-3">Как найти своё первичное отделение?</h4>
+                            <p class="text-gray-600">В личном кабинете при выборе организации введите номер вашей школы или название молодежного центра. Если вашей школы нет в списке, обратитесь к советнику директора по воспитанию — он поможет подать заявку на открытие «первички».</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projects" class="scroll-mt-28">
+                    <h2 class="text-4xl font-black mb-8 flex items-center gap-4 text-gray-800">
+                        <span class="bg-red-600 text-white w-12 h-12 rounded-2xl flex items-center justify-center">02</span>
+                        Проекты, Активности и Лагеря
+                    </h2>
+                    <div class="grid gap-6">
+                        <div class="answer-box bg-white p-8 rounded-3xl shadow-sm">
+                            <h4 class="text-xl font-bold mb-3 text-red-600">Как поехать в «Артек» или «Смену»?</h4>
+                            <p class="text-gray-600 mb-4">Нужно участвовать в тематических конкурсах Движения. За каждое достижение в системе начисляются баллы. В разделе «Мероприятия» ищите проекты с пометкой «Смена в ВДЦ». Победители получают путевку бесплатно (оплачивается только дорога).</p>
+                        </div>
+                        <div class="answer-box bg-white p-8 rounded-3xl shadow-sm">
+                            <h4 class="text-xl font-bold mb-3">Что такое «Совет Первых»?</h4>
+                            <p class="text-gray-600">Это орган самоуправления, где ребята сами решают, какие мероприятия проводить в школе или регионе. Чтобы попасть туда, нужно быть активным участником и пройти выборы внутри своего отделения.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="money" class="scroll-mt-28">
+                    <h2 class="text-4xl font-black mb-8 flex items-center gap-4 text-gray-800">
+                        <span class="bg-red-600 text-white w-12 h-12 rounded-2xl flex items-center justify-center">03</span>
+                        Гранты и Мерч
+                    </h2>
+                    <div class="bg-gray-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden">
+                        <h4 class="text-2xl font-bold mb-6">Как получить 1 000 000 рублей?</h4>
+                        <p class="text-gray-400 mb-8 text-lg">Конкурс «Первые.Гранты» позволяет получить финансирование на реализацию идеи вашей школы или проектной команды. Прием заявок обычно проходит весной.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://гранты.будьвдвижении.рф" class="bg-red-600 px-8 py-3 rounded-full font-bold hover:bg-red-700 transition">Подать на грант</a>
+                            <div class="flex items-center gap-2 text-sm text-gray-400">
+                                <i data-feather="info" class="w-4"></i> Для юридических лиц и ИП
+                            </div>
+                        </div>
+                        <i data-feather="dollar-sign" class="absolute -right-10 -bottom-10 w-64 h-64 text-white/5 rotate-12"></i>
+                    </div>
+                </section>
+
+                <section id="parents" class="scroll-mt-28">
+                    <h2 class="text-4xl font-black mb-8 flex items-center gap-4 text-gray-800">
+                        <span class="bg-red-600 text-white w-12 h-12 rounded-2xl flex items-center justify-center">04</span>
+                        Для родителей
+                    </h2>
+                    <div class="bg-white p-10 rounded-[3rem] border-2 border-red-100">
+                        <h4 class="text-2xl font-bold mb-4">Зачем моему ребенку Движение?</h4>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Это безопасная среда для развития талантов, получения дополнительных баллов к ЕГЭ (за волонтерство) и возможность путешествовать по всей России за счет государства. Все мероприятия проходят под присмотром сертифицированных наставников.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-6 bg-gray-50 rounded-2xl">
+                                <span class="font-bold block mb-2">Безопасность</span>
+                                <span class="text-sm text-gray-500">Проверенный контент и модерация всех чатов.</span>
+                            </div>
+                            <div class="p-6 bg-gray-50 rounded-2xl">
+                                <span class="font-bold block mb-2">Портфолио</span>
+                                <span class="text-sm text-gray-500">Официальные сертификаты для личного дела.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <div class="mt-32 p-12 bg-red-600 rounded-[4rem] text-center text-white shadow-2xl">
+            <h2 class="text-4xl font-black mb-4">ЕЩЕ ОСТАЛИСЬ ВОПРОСЫ?</h2>
+            <p class="text-xl mb-10 opacity-80">Наша служба поддержки работает 24/7, чтобы ты стал Первым.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="tel:88003336311" class="bg-white text-red-600 px-10 py-4 rounded-full font-black text-xl hover:scale-105 transition">8 (800) 333-63-11</a>
+                <a href="mailto:help@rddm.ru" class="bg-black text-white px-10 py-4 rounded-full font-black text-xl hover:scale-105 transition">help@rddm.ru</a>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script>
+        feather.replace();
+        // Плавная прокрутка для бокового меню
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
